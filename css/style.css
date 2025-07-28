@@ -1,0 +1,214 @@
+:root {
+  --bg-light: #1f1f1f;
+  --section-bg: #1f1f1f;
+  --text-primary: #a5a5a5;
+  --text-secondary: #a5a5a5;
+  --btn-primary: #4a90e2;
+  --btn-secondary: #33917d;
+  --hover-accent: #f5a623;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-primary);
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: rgba(51, 51, 51, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1f1f1f;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--hover-accent);
+}
+
+/* Hero estático */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-image: url('../assets/hero-bg-light.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Botones */
+.btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--btn-primary);
+  color: #f28e0c;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: var(--hover-accent);
+}
+
+/* Secciones Mazmorras y Jefes */
+.features, .bosses {
+  padding: 4rem 0;
+  background: var(--section-bg);
+  text-align: center;
+}
+
+/* Tarjetas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: var(--section-bg);
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.card img {
+  width: 100%;
+}
+.card h3 {
+  margin: 1rem;
+}
+.card p {
+  margin: 0 1rem 1rem;
+  color: var(--text-secondary);
+}
+
+/* Slider de Jefes */
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+.slide {
+  display: none;
+  text-align: center;
+}
+.slide.active {
+  display: block;
+}
+.slider img {
+  max-width: 300px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  color: var(--text-primary);
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.prev:hover, .next:hover {
+  background: var(--btn-secondary);
+  color: #fff;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Sección Unirse */
+.join {
+  background: var(--section-bg);
+  padding: 3rem 0;
+  text-align: center;
+}
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--btn-secondary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background: var(--hover-accent);
+}
+
+/* Footer */
+footer {
+  background: var(--section-bg);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid #1f1f1f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo img { height: 40px; }
+  nav ul { gap: 1rem; }
+}
