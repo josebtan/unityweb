@@ -3,108 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UnityCraft | Mazmorras & Jefes</title>
+  <title>UnityCraft | Dashboard</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Header y Navegación -->
+  <!-- HEADER -->
   <header>
     <div class="container header-flex">
-      <a href="/" class="logo">
+      <a href="#home" class="logo">
         <img src="assets/logo.png" alt="UnityCraft Logo" />
-        <img src="assets/name.png" alt="UnityCraft name" />
+        <img src="assets/name.png" alt="UnityCraft Name" />
       </a>
 
-      <!-- Botón Hamburguesa -->
       <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
-      <!-- Navegación -->
       <nav class="nav-menu">
         <ul>
+          <li><a href="#home">⌂</a></li>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#mazmorras">Mazmorras</a></li>
-          <li><a href="#jefes">Jefes</a></li>
-          <li><a href="#unirse">Unirse</a></li>
+          <li><a href="#tutoriales">Tutoriales</a></li>
+          <li><a href="#stabs">Stabs</a></li>
+          <li><a href="#servidor">Servidor</a></li>
+          <li><a href="#tienda">Tienda</a></li>
+          <li><a href="#redes">Redes</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Sección Hero -->
-  <section id="inicio" class="hero">
+  <!-- HERO ROTATOR -->
+  <section id="home" class="hero">
     <div class="overlay"></div>
     <div class="hero-content container">
-      <h1>Bienvenido a UnityCraft</h1>
-      <p>Explora mazmorras antiguas. Derrota jefes legendarios.</p>
-      <a href="#unirse" class="btn-primary">¡Únete Ahora!</a>
+      <h1>UnityCraft</h1>
+      <p>Bienvenido al panel informativo</p>
     </div>
   </section>
 
-  <!-- Sección Mazmorras -->
-  <section id="mazmorras" class="features container">
-    <h2>Mazmorras Épicas</h2>
+  <!-- INICIO -->
+  <section id="inicio" class="info container">
+    <h2>¿Qué es UnityCraft?</h2>
+    <p>
+      UnityCraft es un servidor Minecraft enfocado en la inmersión, la comunidad  
+      y la creatividad. Únete para explorar mazmorras, aprender mecánicas únicas  
+      y disfrutar de eventos semanales.
+    </p>
+  </section>
+
+  <!-- TUTORIALS -->
+  <section id="tutoriales" class="tutoriales container">
+  <h2>Tutoriales</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Mecánica de Clanes</h3>
+      <p class="summary">Aprende a crear y gestionar tu propio clan.</p>
+      <div class="details">
+        <h4>Pasos para crear un clan</h4>
+        <ol>
+          <li>Ejecuta <code>/clan crear &lt;nombre&gt;</code> en chat.</li>
+          <li>Invita miembros con <code>/clan invitar &lt;jugador&gt;</code>.</li>
+          <li>Gestiona rangos y permisos vía menú interactivo.</li>
+        </ol>
+        <p>Consejo: enfócate en la comunicación con tu equipo para dominar mazmorras juntos.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Sistema de Economía</h3>
+      <p class="summary">Descubre cómo funciona nuestra tienda interna.</p>
+      <div class="details">
+        <h4>Cómo ganar monedas</h4>
+        <ul>
+          <li>Mina bloques raros en mazmorras.</li>
+          <li>Completa misiones diarias (<code>/misiones</code>).</li>
+          <li>Vende items sobrantes en el NPC “Mercader”.</li>
+        </ul>
+        <p>Tip: Participa en eventos semanales para bonificaciones extra.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Eventos de Guerra</h3>
+      <p class="summary">Guía rápida para preparar tu equipo y estrategias.</p>
+      <div class="details">
+        <h4>Estrategias básicas</h4>
+        <p>Forma escuadrones de 4 jugadores con roles definidos:</p>
+        <ul>
+          <li>Líder: coordina el ataque.</li>
+          <li>Tanque: recibe el daño.</li>
+          <li>Asesino: elimina objetivos clave.</li>
+          <li>Sanador: mantiene al equipo vivo.</li>
+        </ul>
+        <p>No olvides equiparte con pociones de velocidad y bloques de refugio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- STABS -->
+  <section id="stabs" class="stats container">
+    <h2>Estadísticas</h2>
+    <ul class="stats-list">
+      <li>Jugadores Online: <strong>120</strong></li>
+      <li>Uptime: <strong>99.9%</strong></li>
+      <li>TPS Promedio: <strong>19.8</strong></li>
+      <li>Total de Muertes: <strong>8,432</strong></li>
+    </ul>
+  </section>
+
+  <!-- SERVIDOR -->
+  <section id="servidor" class="connect container">
+    <h2>Conéctate Ahora</h2>
+    <p>Dirección IP Java: <code>unity.holy.gg</code></p>
+    <p>Dirección IP Bedrock: <code>na6.holy.gg:26143</code></p>
+  </section>
+
+  <!-- TIENDA -->
+  <section id="tienda" class="store container">
+    <h2>Tienda de Cosméticos</h2>
     <div class="cards">
       <div class="card">
-        <img src="assets/boss1.png" alt="Mazmorra del Fuego"/>
-        <h3>Forja Infernal</h3>
-        <p>Enfréntate a lava, gólems de magma y trampas ardientes.</p>
+        <h3>Pack de Alas</h3>
+        <p>Da un toque épico a tu personaje.</p>
       </div>
       <div class="card">
-        <img src="assets/boss2.png" alt="Santuario Sepulcral"/>
-        <h3>Santuario Sepulcral</h3>
-        <p>Desentraña secretos oscuros y evita fantasmas vengativos.</p>
+        <h3>Hologramas</h3>
+        <p>Personaliza tu spawn con hologramas únicos.</p>
       </div>
       <div class="card">
-        <img src="assets/boss3.png" alt="Templo de Hielo"/>
-        <h3>Templo Glacial</h3>
-        <p>Supera pasadizos congelados y acertijos de cristal.</p>
+        <h3>Emotes</h3>
+        <p>Muestra gestos animados en el chat.</p>
       </div>
     </div>
   </section>
 
-  <!-- Sección Jefes -->
-  <section id="jefes" class="bosses container">
-    <h2>Jefes Legendarios</h2>
-    <div class="slider">
-      <div class="slide active">
-        <img src="assets/boss1.png" alt="Rey de Fuego"/>
-        <h3>Rey de Fuego</h3>
-        <p>Reina con puño incandescente y un ejército de salamandras.</p>
-      </div>
-      <div class="slide">
-        <img src="assets/boss2.png" alt="Señora de las Sombras"/>
-        <h3>Señora de las Sombras</h3>
-        <p>Conjura espectros y manipula la oscuridad a su favor.</p>
-      </div>
-      <div class="slide">
-        <img src="assets/boss3.png" alt="Coloso de Hielo"/>
-        <h3>Coloso de Hielo</h3>
-        <p>Sus pasos congelan el suelo y su aliento destroza armaduras.</p>
-      </div>
-      <button class="prev">&lt;</button>
-      <button class="next">&gt;</button>
-    </div>
+  <!-- REDES -->
+  <section id="redes" class="social container">
+    <h2>Síguenos y Contáctanos</h2>
+    <ul class="social-list">
+      <li><a href="https://twitter.com/tu_servidor" target="_blank">Twitter</a></li>
+      <li><a href="https://facebook.com/tu_servidor" target="_blank">Facebook</a></li>
+      <li><a href="https://instagram.com/tu_servidor" target="_blank">Instagram</a></li>
+      <li><a href="mailto:soporte@unitycraft.mx">Correo</a></li>
+    </ul>
   </section>
 
-  <!-- Sección Unirse -->
-  <section id="unirse" class="join container">
-    <h2>¡Ingresa YA!</h2>
-    <p>Guarda el servidor en tu lista de Minecraft</p>
-    <a href="minecraft://?addExternalServer=UnityCraft&address=unity.holy.gg" class="btn-secondary">
-      IP Java
-    </a>
-    <a href="minecraft://?addExternalServer=UnityCraft&address=na6.holy.gg:26143" class="btn-secondary">
-      IP Bedrock
-    </a>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 UnityCraft. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Script con defer -->
   <script src="js/scripts.js" defer></script>
+  <!-- Modal para Tutoriales -->
+<div id="tutorial-modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Cerrar">&times;</button>
+    <h3 id="modal-title"></h3>
+    <div id="modal-body" class="modal-body"></div>
+  </div>
+</div>
 </body>
 </html>
