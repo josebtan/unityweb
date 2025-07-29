@@ -1,0 +1,343 @@
+/* css/style.css */
+:root {
+  --bg-light:       #1f1f1f;
+  --section-bg:     #1f1f1f;
+  --text-primary:   #a5a5a5;
+  --text-secondary: #a5a5a5;
+  --btn-primary:    #4a90e2;
+  --btn-secondary:  #33917d;
+  --hover-accent:   #f5a623;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-primary);
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  background: rgba(51, 51, 51, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1f1f1f;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+/* Navegación */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-menu a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-menu a:hover {
+  color: var(--hover-accent);
+}
+
+/* SECCIONES GENERALES */
+.info,
+.tutoriales,
+.stats,
+.connect,
+.store,
+.social {
+  padding: 4rem 0;
+  background: var(--section-bg);
+  text-align: center;
+}
+.info h2,
+.tutoriales h2,
+.stats h2,
+.connect h2,
+.store h2,
+.social h2 {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+/* HERO ROTATOR */
+.hero {
+  position: relative;
+  height: 80vh;
+  animation: pan-background 30s linear infinite alternate;
+  transition: background-image 1s ease-in-out;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@keyframes pan-background {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+/* BOTONES */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-primary {
+  background: var(--btn-primary);
+  color: #f28e0c;
+}
+.btn-primary:hover {
+  background: var(--hover-accent);
+}
+.btn-secondary {
+  background: var(--btn-secondary);
+}
+.btn-secondary:hover {
+  background: var(--hover-accent);
+}
+
+/* TARJETAS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: var(--section-bg);
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin: 1rem;
+}
+.card p {
+  margin: 0 1rem 1rem;
+  color: var(--text-secondary);
+}
+/* Detalles ocultos en tutoriales */
+.card .details {
+  display: none;
+  padding: 0 1rem 1rem;
+  color: var(--text-secondary);
+  border-top: 1px solid #333;
+}
+.card.active .details {
+  display: block;
+}
+
+/* SLIDER DE JEFES */
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+.slide {
+  display: none;
+  text-align: center;
+}
+.slide.active {
+  display: block;
+}
+.slider img {
+  max-width: 300px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  color: var(--text-primary);
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.prev:hover, .next:hover {
+  background: var(--btn-secondary);
+  color: #fff;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* REDES SOCIALES */
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.social-list a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.social-list a:hover {
+  color: var(--hover-accent);
+}
+
+/* FOOTER */
+footer {
+  background: var(--section-bg);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid #1f1f1f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .logo img {
+    height: 40px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    width: 100%;
+  }
+  .nav-menu.open {
+    display: block;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .nav-menu a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .header-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* Modal Overlay */
+.modal {
+  display: none;                /* oculto por defecto */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 200;
+  align-items: center;          /* para centrar verticalmente */
+  justify-content: center;      /* centrar horizontalmente */
+}
+
+/* Mostrar Modal */
+.modal.open {
+  display: flex;
+}
+
+/* Caja de contenido */
+.modal-content {
+  background: var(--section-bg);
+  color: var(--text-primary);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;             /* limita altura */
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botón Cerrar */
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+/* Cuerpo scrollable */
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  line-height: 1.6;
+  margin-top: 2rem;             /* deja espacio al título */
+}
+
+/* Título dentro del modal */
+#modal-title {
+  padding: 1rem 1.5rem 0;
+  margin: 0;
+  border-bottom: 1px solid #333;
+  color: var(--text-secondary);
+}
