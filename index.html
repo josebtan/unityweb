@@ -15,7 +15,12 @@
         <img src="assets/logo.png" alt="UnityCraft Logo" />
         <img src="assets/name.png" alt="UnityCraft name" />
       </a>
-      <nav>
+
+      <!-- Botón Hamburguesa -->
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+      <!-- Navegación -->
+      <nav class="nav-menu">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#mazmorras">Mazmorras</a></li>
@@ -27,7 +32,7 @@
   </header>
 
   <!-- Sección Hero -->
-   <section id="inicio" class="hero">
+  <section id="inicio" class="hero">
     <div class="overlay"></div>
     <div class="hero-content container">
       <h1>Bienvenido a UnityCraft</h1>
@@ -83,14 +88,14 @@
   </section>
 
   <!-- Sección Unirse -->
-   <section id="unirse" class="join container">
-    <h2>Ingresa YA!!</h2>
-    <p>Guardar servidor</p>
+  <section id="unirse" class="join container">
+    <h2>¡Ingresa YA!</h2>
+    <p>Guarda el servidor en tu lista de Minecraft</p>
     <a href="minecraft://?addExternalServer=UnityCraft&address=unity.holy.gg" class="btn-secondary">
-      Ip Java
+      IP Java
     </a>
     <a href="minecraft://?addExternalServer=UnityCraft&address=na6.holy.gg:26143" class="btn-secondary">
-      Ip Bedrock
+      IP Bedrock
     </a>
   </section>
 
@@ -100,8 +105,6 @@
   </footer>
 
   <!-- Script con defer -->
-  <script src="js/script.js" defer></script>
+  <script src="js/scripts.js" defer></script>
 </body>
 </html>
-
-
