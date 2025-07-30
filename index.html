@@ -10,27 +10,31 @@
 <body>
   <!-- HEADER -->
   <header>
-    <div class="container header-flex">
-      <a href="#home" class="logo">
-        <img src="assets/logo.png" alt="UnityCraft Logo" />
-        <img src="assets/name.png" alt="UnityCraft Name" />
-      </a>
+  <div class="container header-flex">
+    <!-- Logo centra en móvil y enlaza a la sección home -->
+    <a href="#home" class="logo">
+      <img src="assets/name.png" alt="UnityCraft Name" class="name-image" />
+    </a>
 
-      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    <!-- Botón hamburguesa: único icono en móvil -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <!-- puedes reemplazar este span por un SVG más elaborado -->
+      <span class="hamburger-icon">&#9776;</span>
+    </button>
 
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#home">⌂</a></li>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#tutoriales">Tutoriales</a></li>
-          <li><a href="#stabs">Stabs</a></li>
-          <li><a href="#servidor">Servidor</a></li>
-          <li><a href="#tienda">Tienda</a></li>
-          <li><a href="#redes">Redes</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Navegación -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#tutoriales">Tutoriales</a></li>
+        <li><a href="#stabs">Stabs</a></li>
+        <li><a href="#servidor">Servidor</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+        <li><a href="#redes">Redes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <!-- HERO ROTATOR -->
   <section id="home" class="hero">
